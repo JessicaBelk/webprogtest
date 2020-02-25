@@ -1,23 +1,41 @@
+@font-face {
+  font-family: xolonium-bold;
+  src: url(Resources/xolonium-fonts-4.1/otf/Xolonium-Bold.otf);
+}
+
+@font-face {
+  font-family: xolonium;
+  src: url(Resources/xolonium-fonts-4.1/otf/Xolonium-Regular.otf);
+}
+
 body {
   margin: 0;
   background: radial-gradient(#e66465, #9198e5);
+  font-family:  xolonium;
+}
+
+#tempLink {
+  margin: 0 auto;
+  text-align: center;
 }
 
 .page-title {
   color: #f8f8ff;
-  font-family:  serif;
+  font-family:  xolonium;
   font-weight: normal;
   text-align: center;
   font-size: 6em;
 }
 #pnts{
-	float:left
+  padding-left: 2em;
+	float: left;
 }
 #tm{
-float:left	
+  padding-right: 2em;
+  float: right;
 }
 #jnk1{
-	display: flex;
+  text-align: center;
 }
 
 .game-container {
