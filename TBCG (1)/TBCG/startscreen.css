@@ -1,7 +1,5 @@
 .fade{
   animation: fade ease 10s;
-
-
 }
 
 @keyframes fade{
@@ -9,23 +7,23 @@
   to { opacity: 1;}
 }
 
-body{
-	background-image: url("board_Play.png");
-	background-repeat: no-repeat;	
-	background-size: cover;
-	width: 100%; 
-	height: 100%; 
-	overflow: hidden; 
-	position: absolute; 
-	top: 0; 
-	left: 0; 
-	z-index: -1;
+.bgimage {
+  background-image: url("Resources/stars.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
 
 .centerImg {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
-	vertical-align: middle;	
-	
+	vertical-align: middle;
+	width: 100%;
 }
