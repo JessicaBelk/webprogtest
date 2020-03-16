@@ -25,5 +25,28 @@
 	<br>
 	<img src="crystals.png" class="centerImg smallerGif footerImg">
 	
+	
+	<p font color="white" > Do you want to know how many days are left until the end of the semester? If so, Click here</p> 
+		
+	<button onclick="countDays()">answer</button> 
+	<p id="answer"></p>
+		
+	<!-- Javascript for Timer Count --> 
+	<script> 
+	function countDays(){
+	document.write(); 
+	var today = new Date(); 
+        var endDay = new Date("4/27/2020");
+        
+        document.write("Today's Date: " + today.toLocaleDateString()+"<br>");
+        document.write("End Day: " + endDay.toLocaleDateString() +"<br>" ); 
+  
+        var day = 60*60*24*1000; 
+        document.write("<br>"); 
+        var numDays = (endDay - today)/day;
+        document.write("Days Remaining: "+ (Math.ceil( numDays)));
+	}
+</script>
+	
 </body>
 </html>
