@@ -10,11 +10,11 @@
 
 <script>
 	 
-	 	var hoursL = document.getElementById("hours");
-		var minsL = document.getElementById("mins");
+	var hoursL = document.getElementById("hours");
+	var minsL = document.getElementById("mins");
         var secsL = document.getElementById("secs");
         
-		var totalsecs = 0;
+	var totalsecs = 0;
         var totalmins = 0; 
         setInterval(timer, 1000);
         
@@ -35,15 +35,13 @@
             ++totalsecs;
             secsL.innerHTML = convert(totalsecs%60);
             
-          	if (totalsecs == 59){
+          if (totalsecs == 59){
                  
-				++totalmins; 
-                minsL.innerHTML =convert(totalmins%60);
+          ++totalmins; 
+          minsL.innerHTML =convert(totalmins%60);
               
-                
 			}
-          
-            
+ 
         }
 	</script>
   <body>
