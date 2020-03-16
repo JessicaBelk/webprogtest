@@ -11,6 +11,10 @@
   z-index: -2;
 }
 
+#dateCalculator {
+  color: white;
+}
+
 .mainContent {
   min-height: 600px;
 }

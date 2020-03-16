@@ -8,6 +8,9 @@
 <body class="mainContent">
 	<div class="bgimage"></div>
 	<img src="GEMSTONES.png" class="centerImg">
+	<A HREF ="login_screen.html">
+		<img src="login.gif" alt="Alternative Text" class="centerImg smallerGif">
+	</A>
 	<br>
 	<A HREF ="startscreen.html">
 		<img src="startAnim.gif" alt="Alternative Text" class="centerImg smallerGif">
@@ -16,37 +19,44 @@
 	<br>
 	<br>
 	<br>
-	<br>
-	<br>
-	<br>
 	<A HREF ="end_screen.html">
 		<img src="EXIT.gif" alt="Alternative Text" class="centerImg smallerGif">
 	</A> 
 	<br>
+
+	<div id="dateCalculator">
+		<p> Do you want to know how many days are left until the end of the semester?</p>
+		Today's Date: <span id="todayString"></span>
+		<br>
+		End Day: <span id="endString"></span>
+		<br>
+		Days Remaining: <span id="differenceString"></span>
+		<br>
+		<button onclick="countDays()">Answer</button> 
+		<p id="answer"></p>
+			
+		<!-- Javascript for Timer Count --> 
+		<script> 
+			function countDays(){
+				var today = new Date(); 
+			    var endDay = new Date("4/27/2020");
+
+			    var todayString = document.getElementById("todayString");
+			    var endString = document.getElementById("endString");
+			    var differenceString = document.getElementById("differenceString");
+			    
+			    
+			    todayString.innerHTML = "" + today.toLocaleDateString();
+			    endString.innerHTML = "" + endDay.toLocaleDateString(); 
+
+			    var day = 60*60*24*1000; 
+			    var numDays = (endDay - today)/day;
+			    differenceString.innerHTML = "" + Math.ceil(numDays);
+			}
+		</script>
+	</div>
+	
+
 	<img src="crystals.png" class="centerImg smallerGif footerImg">
-	
-	
-	<p font color="white" > Do you want to know how many days are left until the end of the semester? If so, Click here</p> 
-		
-	<button onclick="countDays()">answer</button> 
-	<p id="answer"></p>
-		
-	<!-- Javascript for Timer Count --> 
-	<script> 
-	function countDays(){
-	document.write(); 
-	var today = new Date(); 
-        var endDay = new Date("4/27/2020");
-        
-        document.write("Today's Date: " + today.toLocaleDateString()+"<br>");
-        document.write("End Day: " + endDay.toLocaleDateString() +"<br>" ); 
-  
-        var day = 60*60*24*1000; 
-        document.write("<br>"); 
-        var numDays = (endDay - today)/day;
-        document.write("Days Remaining: "+ (Math.ceil( numDays)));
-	}
-</script>
-	
 </body>
 </html>
