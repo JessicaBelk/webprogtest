@@ -17,6 +17,7 @@ body {
 #tempLink {
   margin: 0 auto;
   text-align: center;
+  font-size: 50px;
 }
 
 .page-title {
@@ -29,20 +30,24 @@ body {
 #pnts{
   padding-left: 2em;
 	float: left;
+  font-size: 30px;
 }
 #tm{
   padding-right: 2em;
   float: right;
+  font-size: 30px;
 }
 #jnk1{
   text-align: center;
 }
 
 .game-container {
-  margin: 50px auto;
+  margin-top: 100px auto;
+  padding-top: 50px;
   display: grid;
-  grid-template-columns: repeat(4, auto);
-  grid-gap: 10px;
+  grid-template-columns: repeat(2, auto);
+  grid-gap: 30px;
+  grid-column-gap: 75px;
   justify-content: center;
   perspective: 500px;
 }
@@ -116,8 +121,8 @@ body {
 }
 .flip-card {
   background-color: transparent;
- height: 175px;
-  width: 125px;
+ height: 286px;
+  width: 200px;
   perspective: 1000px;
 }
 
@@ -146,16 +151,12 @@ body {
 .flip-card-front {
   background-image: url("BACKING.png");
   background-size: 120px; 
-  width: 175 px; 
-  height: 125 px; 
   color: black;
 }
 
 .flip-card-back {
   background-image: url("ver1pink.png");
   background-size: 120px; 
-  width: 175 px; 
-  height: 125 px; 		
   color: white;
   transform: rotateY(180deg);
 }
