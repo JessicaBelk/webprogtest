@@ -8,9 +8,48 @@
 <body class="mainContent">
 	<div class="bgimage"></div>
 	<img src="GEMSTONES.png" class="centerImg">
-	<A HREF ="login_screen.html">
-		<img src="login.gif" alt="Alternative Text" class="centerImg smallerGif">
-	</A>
+	<div id="loginSpace">
+		<img src="login.gif" alt="Alternative Text" class="centerImg smallerGif" onclick="checkLocalData()">
+	</div>
+	<script type="text/javascript">
+
+		var userid = getCookie("userid");
+		var loginSpace = document.getElementById("loginSpace");
+		if (userid != null) {
+			loginSpace.innerHTML = "Welcome back, " + userid + "!";
+		} else {
+			loginSpace.innerHTML = "Don't forget to log in!" + loginSpace.innerHTML;
+		}
+
+		function getCookie(name) {
+		    // Split cookie string and get all individual name=value pairs in an array
+		    var cookieArr = document.cookie.split(";");
+		    
+		    // Loop through the array elements
+		    for(var i = 0; i < cookieArr.length; i++) {
+		        var cookiePair = cookieArr[i].split("=");
+		        if(name == cookiePair[0].trim()) {
+		            return decodeURIComponent(cookiePair[1]);
+		        }
+		    }
+		    
+		    return null;
+		}
+
+		function checkLocalData() {
+		    var userid = getCookie("userid");
+		    var loginSpace = document.getElementById("loginSpace");
+
+		    if (userid == null) {
+		    	// redirect to the login screen
+		        window.location.href = "login_screen.html";
+		    }
+		    else {
+		        loginSpace.innerHTML = "" + userid;
+		    }
+		}
+	</script>
+	
 	<br>
 	<A HREF ="startscreen.html">
 		<img src="startAnim.gif" alt="Alternative Text" class="centerImg smallerGif">
