@@ -13,6 +13,7 @@
 
 #dateCalculator {
   color: white;
+  font-size: 18px;
 }
 
 .mainContent {
@@ -44,4 +45,5 @@
 #loginSpace {
   color: white;
   text-align: center;
+  font-size: 25px;
 }
